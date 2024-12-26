@@ -1,0 +1,79 @@
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  height: 100%; /* Ensure full height */
+  display: flex;
+  flex-direction: column; /* Set layout for footer positioning */
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00aaff;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
+}
+
+.features article {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 30%;
+  min-width: 250px; /* Ensure readable size on smaller screens */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+main {
+  flex: 1; /* Make the main content grow to fill available space */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column; /* Stack navigation links vertically */
+      gap: 1rem;
+  }
+
+  .features {
+      flex-direction: column; /* Stack features vertically */
+      align-items: center; /* Center content on small screens */
+  }
+
+  .features article {
+      width: 80%; /* Adjust width for smaller screens */
+  }
+}
